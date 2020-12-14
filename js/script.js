@@ -5,21 +5,40 @@
 // va applicato uno sconto del 40% per gli over 65
 // Bonus: grafica a piacere!
 
+
+// METHOD 1
 var km = parseInt(prompt('how many km are you supposed to do?'));
 var age = parseInt(prompt('how old are you?'));
-var normalFare, discountedFare;
-// var twoDecimal = discountedFare.toFixed(2);
+var fare = km * 0.21; // BETWEEN 18 AND 65 YEARS OLD
 
-normalFare = km * 0.21;
 
-if (age < 18){
-  twoDecimal = normalFare - ((normalFare * 20) / 100);
-} else if (age > 65) {
-  twoDecimal = normalFare - ((normalFare * 40) / 100);
-} else {
-  normalFare;
+if (age < 18){ // LESS THAN 18 YEARS OLD
+  fare = fare - ((fare * 20) / 100);
+} else if (age > 65) { // MORE THAN 65 YEARS OLD
+  fare = fare - ((fare * 40) / 100);
 }
 
+var fare = fare.toFixed(2);
 
-console.log(normalFare);
-console.log(twoDecimal);
+document.getElementById('fare').innerText = fare;
+// /METHOD 1
+
+
+
+// METHOD 2
+// var km = parseInt(prompt('how many km are you supposed to do?'));
+// var age = parseInt(prompt('how old are you?'));
+// var fare;
+//
+// if ((age >= 18) && (age <= 65)){
+//   fare = km * 0.21;
+// } else if (age < 18) {
+//   fare = fare - ((fare * 20) / 100);
+// } else {
+//   fare = fare - ((fare * 40) / 100);
+// }
+//
+// var fare = fare.toFixed(2);
+//
+// document.getElementById('fare').innerHTML = fare;
+// /METHOD 2
