@@ -20,7 +20,7 @@ if (age < 18){ // LESS THAN 18 YEARS OLD
 
 var fare = fare.toFixed(2);
 
-document.getElementById('fare').innerText = fare;
+document.getElementById('fare').innerText = 'your train fare totaled € ' + fare;
 // /METHOD 1
 
 
